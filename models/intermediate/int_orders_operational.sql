@@ -4,7 +4,8 @@ select orders.orders_id,
     margin,
     shipping_fee,
     logcost,
-    cast(ship_cost as float64) as ship_cost
+    cast(ship_cost as float64) as ship_cost,
+    revenue
 from {{ref("int_orders_margin")}} as orders
 left join {{ref("stg_raw__ship")}} as ship
 on orders.orders_id=ship.orders_id
