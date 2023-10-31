@@ -1,4 +1,6 @@
-select quantity,
+select date_date,
+    orders_id,
+    quantity,
     revenue,
     purchase_price,
     products_id,
