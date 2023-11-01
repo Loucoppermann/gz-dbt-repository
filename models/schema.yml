@@ -39,7 +39,7 @@ sources:
               - not_null
       - name: adwords
         identifier: raw_gz_adwords
-        description: add campaigns from adwords
+        description: ad campaigns from adwords
         columns:
           - name: concat(date_date, "_", campaign_key)
             description: primary key
@@ -48,7 +48,7 @@ sources:
               - not_null
       - name: bing
         identifier: raw_gz_bing
-        description: add campaigns from bing
+        description: ad campaigns from bing
         columns:
           - name: concat(date_date, "_", campaign_key)
             description: primary key
@@ -57,7 +57,7 @@ sources:
               - not_null
       - name: criteo
         identifier: raw_gz_criteo
-        description: add campaigns from criteo
+        description: ad campaigns from criteo
         columns:
           - name: concat(date_date, "_", campaign_key)
             description: primary key
@@ -66,7 +66,7 @@ sources:
               - not_null
       - name: facebook
         identifier: raw_gz_facebook
-        description: add campaigns from facebook
+        description: ad campaigns from facebook
         columns:
           - name: concat(date_date, "_", campaign_key)
             description: primary key
