@@ -8,8 +8,8 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: sales of greenweez, there is one row per order id
-        freshness: 
-          warn_after: {count: 90, period: day}
+        freshness:
+          warn_after: { count: 90, period: day }
         loaded_at_field: "CAST(date_date as TIMESTAMP)"
         columns:
           - name: concat(orders_id, "_", pdt_id)
@@ -27,7 +27,7 @@ sources:
             tests:
               - unique
               - not_null
-              
+
       - name: ship
         identifier: raw_gz_ship
         description: shipping fee, logCost, ship cost per order id
@@ -37,6 +37,3 @@ sources:
             tests:
               - unique
               - not_null
-              
-              
-              
