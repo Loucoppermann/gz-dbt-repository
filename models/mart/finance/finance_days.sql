@@ -4,6 +4,9 @@ select date_date,
     ROUND(SUM (revenue),2) as revenue,
     ROUND(SAFE_DIVIDE(SUM (revenue),COUNT(orders_id)),2) as average_basket,
     ROUND(SUM (margin),2) as margin,
-    ROUND(SUM (operational_margin),2) as operational_margin
+    ROUND(SUM (operational_margin),2) as operational_margin, 
+    ROUND(SUM(shipping_fee),0) AS shipping_fee, 
+    ROUND(SUM(logcost),0) AS logcost, 
+    ROUND(SUM(ship_cost),0) AS ship_cost 
 from {{ref("int_orders_operational")}}
 GROUP BY date_date
