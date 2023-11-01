@@ -1,6 +1,7 @@
 select orders.orders_id, 
     date_date,
     round((margin+shipping_fee-logcost-cast(ship_cost as float64)),2) as operational_margin,
+    quantity,
     margin,
     shipping_fee,
     logcost,
