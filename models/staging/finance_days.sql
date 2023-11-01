@@ -1,4 +1,4 @@
-{{ config(materialized=table) }}
+{{ config(materialized='table') }}
 select date_date,
     COUNT (orders_id) as number_transactions,
     ROUND(SUM (revenue),2) as revenue,
